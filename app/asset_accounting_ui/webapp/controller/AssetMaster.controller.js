@@ -7,6 +7,14 @@ sap.ui.define([
 
     return Controller.extend("asset_accounting.ui.controller.AssetMaster", {
         onInit: function () {
+            this.getRouter().getRoute("RouteAssetMaster").attachPatternMatched(this._onRouteMatched, this);
+        },
+
+        _onRouteMatched: function () {
+            var oTable = this.byId("assetsTable");
+            if (oTable.getBinding("items")) {
+                oTable.getBinding("items").refresh();
+            }
         },
 
         getRouter: function () {

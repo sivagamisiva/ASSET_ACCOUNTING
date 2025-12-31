@@ -3,7 +3,6 @@ using { asset_accounting as my } from '../db/schema.cds';
 @path: '/service/asset_accounting'
 @requires: 'authenticated-user'
 service asset_accountingSrv {
-  @odata.draft.enabled
   entity Assets as projection on my.Assets;
   @odata.draft.enabled
   entity PurchaseRequisitions as projection on my.PurchaseRequisitions;

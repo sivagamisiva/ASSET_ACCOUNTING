@@ -40,7 +40,8 @@
         "[production]": {
           "kind": "xsuaa"
         }
-      }
+      },
+      "db": "hana"
     }
   },
   "lcap": true,
