@@ -46,6 +46,29 @@
             "type": "XML",
             "async": true,
             "id": "app"
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "asset_accounting.dashboard.view",
+                "controlId": "app",
+                "controlAggregation": "pages",
+                "async": true
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "Dashboard",
+                    "target": "Dashboard"
+                }
+            ],
+            "targets": {
+                "Dashboard": {
+                    "viewId": "dashboard",
+                    "viewName": "Dashboard"
+                }
+            }
         }
     }
 }
