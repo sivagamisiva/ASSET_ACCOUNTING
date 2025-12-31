@@ -45,7 +45,15 @@
   },
   "lcap": true,
   "sapux": [
-    "app/asset-accounting.asset_master",
-    "app/asset-accounting.asset_accounting_dashboard"
+    "app/asset_master",
+    "app/purchase_requisition",
+    "app/purchase_order",
+    "app/po_approval",
+    "app/goods_receipt",
+    "app/invoice_receipt",
+    "app/depreciation_run",
+    "app/asset_retirement",
+    "app/legacy_asset",
+    "app/dashboard"
   ]
 }
