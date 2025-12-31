@@ -25,7 +25,7 @@ sap.ui.define([
         },
 
         onCreatePR: function () {
-            sap.m.MessageToast.show("Create PR clicked");
+            this.getRouter().navTo("RouteCreatePurchaseRequisition");
         }
     });
 });

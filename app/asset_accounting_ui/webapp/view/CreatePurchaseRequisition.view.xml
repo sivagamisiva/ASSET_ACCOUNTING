@@ -1,0 +1,31 @@
+<mvc:View
+    controllerName="asset_accounting.ui.controller.CreatePurchaseRequisition"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:form="sap.ui.layout.form">
+    <Page title="Create Purchase Requisition" showNavButton="true" navButtonPress=".onNavBack">
+        <content>
+            <VBox class="sapUiSmallMargin">
+                <form:SimpleForm editable="true" layout="ResponsiveGridLayout" title="PR Details">
+                    <form:content>
+                        <Label text="PR Number (ID)" required="true"/>
+                        <Input id="inPrId" value="{inputModel>/prId}" type="Number"/>
+
+                        <Label text="Quantity"/>
+                        <Input id="inQuantity" value="{inputModel>/quantity}" type="Number"/>
+
+                        <Label text="Estimated Cost"/>
+                        <Input id="inEstimatedCost" value="{inputModel>/estimatedCost}" type="Number"/>
+                    </form:content>
+                </form:SimpleForm>
+            </VBox>
+        </content>
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer/>
+                <Button text="Save" type="Emphasized" press=".onSave"/>
+                <Button text="Cancel" press=".onCancel"/>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>

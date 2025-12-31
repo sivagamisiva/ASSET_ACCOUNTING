@@ -139,6 +139,16 @@
                     "name": "RouteLegacyAsset",
                     "pattern": "legacy",
                     "target": "TargetLegacyAsset"
+                },
+                {
+                    "name": "RouteCreateAsset",
+                    "pattern": "assets/create",
+                    "target": "TargetCreateAsset"
+                },
+                {
+                    "name": "RouteCreatePurchaseRequisition",
+                    "pattern": "requisitions/create",
+                    "target": "TargetCreatePurchaseRequisition"
                 }
             ],
             "targets": {
@@ -201,6 +211,18 @@
                     "viewId": "legacyAsset",
                     "viewName": "LegacyAsset",
                     "viewLevel": 2
+                },
+                "TargetCreateAsset": {
+                    "viewType": "XML",
+                    "viewId": "createAsset",
+                    "viewName": "CreateAsset",
+                    "viewLevel": 3
+                },
+                "TargetCreatePurchaseRequisition": {
+                    "viewType": "XML",
+                    "viewId": "createPurchaseRequisition",
+                    "viewName": "CreatePurchaseRequisition",
+                    "viewLevel": 3
                 }
             }
         }

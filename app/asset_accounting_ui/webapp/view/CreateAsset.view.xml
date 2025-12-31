@@ -1,0 +1,47 @@
+<mvc:View
+    controllerName="asset_accounting.ui.controller.CreateAsset"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+    <Page title="Create Asset" showNavButton="true" navButtonPress=".onNavBack">
+        <content>
+            <VBox class="sapUiSmallMargin">
+                <form:SimpleForm editable="true" layout="ResponsiveGridLayout" title="Asset Details">
+                    <form:content>
+                        <Label text="Asset Name" required="true"/>
+                        <Input id="inAssetName" value="{inputModel>/assetName}"/>
+                        
+                        <Label text="Asset Type"/>
+                        <Select id="slAssetType" selectedKey="{inputModel>/assetType}">
+                             <core:Item key="Tangible" text="Tangible" />
+                             <core:Item key="Intangible" text="Intangible" />
+                        </Select>
+
+                        <Label text="Asset Class"/>
+                        <Input id="inAssetClass" value="{inputModel>/assetClass}"/>
+
+                        <Label text="Cost Center"/>
+                        <Input id="inCostCenter" value="{inputModel>/costCenter}"/>
+
+                        <Label text="Acquisition Value"/>
+                        <Input id="inAcquisitionValue" value="{inputModel>/acquisitionValue}" type="Number"/>
+
+                        <Label text="Useful Life"/>
+                        <Input id="inUsefulLife" value="{inputModel>/usefulLife}" type="Number"/>
+
+                        <Label text="Capitalization Date"/>
+                        <DatePicker id="dpCapitalizationDate" value="{inputModel>/capitalizationDate}" displayFormat="yyyy-MM-dd" valueFormat="yyyy-MM-dd"/>
+                    </form:content>
+                </form:SimpleForm>
+            </VBox>
+        </content>
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer/>
+                <Button text="Save" type="Emphasized" press=".onSave"/>
+                <Button text="Cancel" press=".onCancel"/>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>

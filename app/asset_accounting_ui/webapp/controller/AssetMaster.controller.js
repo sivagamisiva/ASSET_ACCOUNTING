@@ -25,8 +25,7 @@ sap.ui.define([
         },
 
         onCreateAsset: function () {
-            // Placeholder for create logic
-            sap.m.MessageToast.show("Create Asset clicked");
+            this.getRouter().navTo("RouteCreateAsset");
         },
 
         onPressAsset: function (oEvent) {
