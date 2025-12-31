@@ -41,7 +41,12 @@
           "kind": "xsuaa"
         }
       },
-      "db": "hana"
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "url": "db.sqlite"
+        }
+      }
     }
   },
   "lcap": true,
