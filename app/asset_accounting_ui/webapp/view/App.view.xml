@@ -1,0 +1,8 @@
+<mvc:View
+    controllerName="asset_accounting.ui.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true">
+    <App id="appPro">
+    </App>
+</mvc:View>

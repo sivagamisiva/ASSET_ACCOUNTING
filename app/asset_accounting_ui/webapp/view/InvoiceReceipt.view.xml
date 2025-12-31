@@ -1,0 +1,27 @@
+<mvc:View
+    controllerName="asset_accounting.ui.controller.InvoiceReceipt"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page title="Invoice Receipts" showNavButton="true" navButtonPress=".onNavBack">
+        <content>
+            <Table id="invoiceTable" items="{/Invoices}">
+                <columns>
+                    <Column><Text text="Invoice ID"/></Column>
+                    <Column><Text text="Amount"/></Column>
+                    <Column><Text text="Date"/></Column>
+                    <Column><Text text="Status"/></Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{invoiceId}"/>
+                            <Text text="{invoiceAmount}"/>
+                            <Text text="{invoiceDate}"/>
+                            <Text text="{paymentStatus}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

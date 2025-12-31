@@ -1,0 +1,27 @@
+<mvc:View
+    controllerName="asset_accounting.ui.controller.PurchaseOrder"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page title="Purchase Orders" showNavButton="true" navButtonPress=".onNavBack">
+        <content>
+            <Table id="poTable" items="{/PurchaseOrders}">
+                <columns>
+                    <Column><Text text="PO ID"/></Column>
+                    <Column><Text text="Vendor"/></Column>
+                    <Column><Text text="Cost"/></Column>
+                    <Column><Text text="Status"/></Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{poId}"/>
+                            <Text text="{vendorName}"/>
+                            <Text text="{finalCost}"/>
+                            <Text text="{approvalStatus}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

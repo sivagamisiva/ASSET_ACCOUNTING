@@ -1,0 +1,25 @@
+<mvc:View
+    controllerName="asset_accounting.ui.controller.GoodsReceipt"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page title="Goods Receipts" showNavButton="true" navButtonPress=".onNavBack">
+        <content>
+            <Table id="grTable" items="{/GoodsReceipts}">
+                <columns>
+                    <Column><Text text="GR ID"/></Column>
+                    <Column><Text text="Date"/></Column>
+                    <Column><Text text="Status"/></Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{grId}"/>
+                            <Text text="{receivedDate}"/>
+                            <Text text="{status}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,27 @@
+<mvc:View
+    controllerName="asset_accounting.ui.controller.LegacyAsset"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page title="Legacy Assets" showNavButton="true" navButtonPress=".onNavBack">
+        <content>
+            <Table id="legacyTable" items="{/LegacyAssets}">
+                <columns>
+                    <Column><Text text="ID"/></Column>
+                    <Column><Text text="Name"/></Column>
+                    <Column><Text text="Value"/></Column>
+                    <Column><Text text="Accumulated Dep."/></Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{legacyAssetId}"/>
+                            <Text text="{assetName}"/>
+                            <Text text="{acquisitionValue}"/>
+                            <Text text="{accumulatedDepreciation}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

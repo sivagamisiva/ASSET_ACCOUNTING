@@ -1,0 +1,27 @@
+<mvc:View
+    controllerName="asset_accounting.ui.controller.AssetRetirement"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page title="Asset Retirements" showNavButton="true" navButtonPress=".onNavBack">
+        <content>
+            <Table id="retireTable" items="{/AssetRetirements}">
+                <columns>
+                    <Column><Text text="Retirement ID"/></Column>
+                    <Column><Text text="Date"/></Column>
+                    <Column><Text text="Value"/></Column>
+                    <Column><Text text="Reason"/></Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{retirementId}"/>
+                            <Text text="{retirementDate}"/>
+                            <Text text="{retirementValue}"/>
+                            <Text text="{reason}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

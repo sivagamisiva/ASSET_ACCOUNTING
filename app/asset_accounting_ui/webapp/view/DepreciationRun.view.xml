@@ -1,0 +1,27 @@
+<mvc:View
+    controllerName="asset_accounting.ui.controller.DepreciationRun"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page title="Depreciation Runs" showNavButton="true" navButtonPress=".onNavBack">
+        <content>
+            <Table id="depTable" items="{/DepreciationRuns}">
+                <columns>
+                    <Column><Text text="Run ID"/></Column>
+                    <Column><Text text="Period"/></Column>
+                    <Column><Text text="Amount"/></Column>
+                    <Column><Text text="Type"/></Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{depId}"/>
+                            <Text text="{fiscalPeriod}"/>
+                            <Text text="{depreciationAmount}"/>
+                            <Text text="{runType}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

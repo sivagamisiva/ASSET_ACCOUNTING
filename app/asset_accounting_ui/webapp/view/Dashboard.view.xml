@@ -1,0 +1,71 @@
+<mvc:View
+    controllerName="asset_accounting.ui.controller.Dashboard"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
+    <Page title="{i18n>dashboardTitle}" backgroundDesign="List">
+        <content>
+            <VBox class="sapUiSmallMargin">
+                <Panel headerText="{i18n>groupAssetManagement}" width="auto" class="sapUiResponsiveMargin">
+                    <GenericTile header="{i18n>tileAssetMaster}" subheader="{i18n>subAssetMaster}" press=".onPressAssetMaster">
+                        <TileContent>
+                            <ImageContent src="sap-icon://money-bills"/>
+                        </TileContent>
+                    </GenericTile>
+                </Panel>
+
+                <Panel headerText="{i18n>groupAssetProcurement}" width="auto" class="sapUiResponsiveMargin">
+                    <GenericTile header="{i18n>tilePurchaseReq}" subheader="{i18n>subPurchaseReq}" press=".onPressPurchaseRequisition">
+                        <TileContent>
+                            <ImageContent src="sap-icon://cart"/>
+                        </TileContent>
+                    </GenericTile>
+                    <GenericTile header="{i18n>tilePurchaseOrder}" subheader="{i18n>subPurchaseOrder}" press=".onPressPurchaseOrder">
+                        <TileContent>
+                            <ImageContent src="sap-icon://sales-order"/>
+                        </TileContent>
+                    </GenericTile>
+                </Panel>
+
+                <Panel headerText="{i18n>groupApprovals}" width="auto" class="sapUiResponsiveMargin">
+                    <GenericTile header="{i18n>tilePoApproval}" subheader="{i18n>subPoApproval}" press=".onPressPoApproval">
+                        <TileContent>
+                            <ImageContent src="sap-icon://approvals"/>
+                        </TileContent>
+                    </GenericTile>
+                </Panel>
+
+                <Panel headerText="{i18n>groupReceipt}" width="auto" class="sapUiResponsiveMargin">
+                    <GenericTile header="{i18n>tileGoodsReceipt}" subheader="{i18n>subGoodsReceipt}" press=".onPressGoodsReceipt">
+                        <TileContent>
+                            <ImageContent src="sap-icon://supplier"/>
+                        </TileContent>
+                    </GenericTile>
+                    <GenericTile header="{i18n>tileInvoiceReceipt}" subheader="{i18n>subInvoiceReceipt}" press=".onPressInvoiceReceipt">
+                        <TileContent>
+                            <ImageContent src="sap-icon://receipt"/>
+                        </TileContent>
+                    </GenericTile>
+                </Panel>
+
+                <Panel headerText="{i18n>groupAccounting}" width="auto" class="sapUiResponsiveMargin">
+                    <GenericTile header="{i18n>tileDepreciation}" subheader="{i18n>subDepreciation}" press=".onPressDepreciationRun">
+                        <TileContent>
+                            <ImageContent src="sap-icon://line-chart"/>
+                        </TileContent>
+                    </GenericTile>
+                    <GenericTile header="{i18n>tileRetirement}" subheader="{i18n>subRetirement}" press=".onPressAssetRetirement">
+                        <TileContent>
+                            <ImageContent src="sap-icon://decline"/>
+                        </TileContent>
+                    </GenericTile>
+                    <GenericTile header="{i18n>tileLegacy}" subheader="{i18n>subLegacy}" press=".onPressLegacyAsset">
+                        <TileContent>
+                            <ImageContent src="sap-icon://history"/>
+                        </TileContent>
+                    </GenericTile>
+                </Panel>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,208 @@
+{
+    "_version": "1.49.0",
+    "sap.app": {
+        "id": "asset_accounting.ui",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "dataSources": {
+            "mainService": {
+                "uri": "/service/asset_accounting/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "odataVersion": "4.0"
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": false,
+        "dependencies": {
+            "minUI5Version": "1.108.0",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.f": {},
+                "sap.suite.ui.generic.template": {},
+                "sap.ui.comp": {},
+                "sap.ui.generic.app": {},
+                "sap.ui.table": {},
+                "sap.ushell": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "asset_accounting.ui.i18n.i18n"
+                }
+            },
+            "": {
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {
+                    "synchronizationMode": "None",
+                    "operationMode": "Server",
+                    "autoExpandSelect": true,
+                    "earlyRequests": true
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "asset_accounting.ui.view.App",
+            "type": "XML",
+            "async": true,
+            "id": "app"
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "async": true,
+                "viewPath": "asset_accounting.ui.view",
+                "controlId": "appPro",
+                "controlAggregation": "pages",
+                "clearControlAggregation": false
+            },
+            "routes": [
+                {
+                    "name": "RouteDashboard",
+                    "pattern": "",
+                    "target": "TargetDashboard"
+                },
+                {
+                    "name": "RouteAssetMaster",
+                    "pattern": "assets",
+                    "target": "TargetAssetMaster"
+                },
+                {
+                    "name": "RoutePurchaseRequisition",
+                    "pattern": "requisitions",
+                    "target": "TargetPurchaseRequisition"
+                },
+                {
+                    "name": "RoutePurchaseOrder",
+                    "pattern": "orders",
+                    "target": "TargetPurchaseOrder"
+                },
+                {
+                    "name": "RoutePoApproval",
+                    "pattern": "approvals",
+                    "target": "TargetPoApproval"
+                },
+                {
+                    "name": "RouteGoodsReceipt",
+                    "pattern": "receipts",
+                    "target": "TargetGoodsReceipt"
+                },
+                {
+                    "name": "RouteInvoiceReceipt",
+                    "pattern": "invoices",
+                    "target": "TargetInvoiceReceipt"
+                },
+                {
+                    "name": "RouteDepreciationRun",
+                    "pattern": "depreciation",
+                    "target": "TargetDepreciationRun"
+                },
+                {
+                    "name": "RouteAssetRetirement",
+                    "pattern": "retirement",
+                    "target": "TargetAssetRetirement"
+                },
+                {
+                    "name": "RouteLegacyAsset",
+                    "pattern": "legacy",
+                    "target": "TargetLegacyAsset"
+                }
+            ],
+            "targets": {
+                "TargetDashboard": {
+                    "viewType": "XML",
+                    "viewId": "dashboard",
+                    "viewName": "Dashboard",
+                    "viewLevel": 1
+                },
+                "TargetAssetMaster": {
+                    "viewType": "XML",
+                    "viewId": "assetMaster",
+                    "viewName": "AssetMaster",
+                    "viewLevel": 2
+                },
+                "TargetPurchaseRequisition": {
+                    "viewType": "XML",
+                    "viewId": "purchaseRequisition",
+                    "viewName": "PurchaseRequisition",
+                    "viewLevel": 2
+                },
+                "TargetPurchaseOrder": {
+                    "viewType": "XML",
+                    "viewId": "purchaseOrder",
+                    "viewName": "PurchaseOrder",
+                    "viewLevel": 2
+                },
+                "TargetPoApproval": {
+                    "viewType": "XML",
+                    "viewId": "poApproval",
+                    "viewName": "PoApproval",
+                    "viewLevel": 2
+                },
+                "TargetGoodsReceipt": {
+                    "viewType": "XML",
+                    "viewId": "goodsReceipt",
+                    "viewName": "GoodsReceipt",
+                    "viewLevel": 2
+                },
+                "TargetInvoiceReceipt": {
+                    "viewType": "XML",
+                    "viewId": "invoiceReceipt",
+                    "viewName": "InvoiceReceipt",
+                    "viewLevel": 2
+                },
+                "TargetDepreciationRun": {
+                    "viewType": "XML",
+                    "viewId": "depreciationRun",
+                    "viewName": "DepreciationRun",
+                    "viewLevel": 2
+                },
+                "TargetAssetRetirement": {
+                    "viewType": "XML",
+                    "viewId": "assetRetirement",
+                    "viewName": "AssetRetirement",
+                    "viewLevel": 2
+                },
+                "TargetLegacyAsset": {
+                    "viewType": "XML",
+                    "viewId": "legacyAsset",
+                    "viewName": "LegacyAsset",
+                    "viewLevel": 2
+                }
+            }
+        }
+    }
+}

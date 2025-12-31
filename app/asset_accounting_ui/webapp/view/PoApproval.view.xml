@@ -1,0 +1,32 @@
+<mvc:View
+    controllerName="asset_accounting.ui.controller.PoApproval"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page title="PO Approvals" showNavButton="true" navButtonPress=".onNavBack">
+        <content>
+            <Table id="poApprovalTable" items="{/PurchaseOrders}">
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <Title text="Pending Approvals"/>
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column><Text text="PO ID"/></Column>
+                    <Column><Text text="Vendor"/></Column>
+                    <Column><Text text="Cost"/></Column>
+                    <Column><Text text="Status"/></Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{poId}"/>
+                            <Text text="{vendorName}"/>
+                            <Text text="{finalCost}"/>
+                            <Text text="{approvalStatus}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>
